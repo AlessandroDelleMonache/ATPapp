@@ -23,19 +23,18 @@
                     {
                         ClientiId = c.String(nullable: false, maxLength: 128),
                         RagioneSociale = c.String(),
-                        AgenteId = c.Int(nullable: false),
-                        Agente_AgentiId = c.Int(),
+                        AgentiId = c.Int(),
                     })
                 .PrimaryKey(t => t.ClientiId)
-                .ForeignKey("dbo.tblAgenti", t => t.Agente_AgentiId)
-                .Index(t => t.Agente_AgentiId);
+                .ForeignKey("dbo.tblAgenti", t => t.AgentiId)
+                .Index(t => t.AgentiId);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.tblClienti", "Agente_AgentiId", "dbo.tblAgenti");
-            DropIndex("dbo.tblClienti", new[] { "Agente_AgentiId" });
+            DropForeignKey("dbo.tblClienti", "AgentiId", "dbo.tblAgenti");
+            DropIndex("dbo.tblClienti", new[] { "AgentiId" });
             DropTable("dbo.tblClienti");
             DropTable("dbo.tblAgenti");
         }

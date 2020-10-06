@@ -13,7 +13,7 @@ namespace ATPapp.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202010061421467_FirstMigration"; }
+            get { return "202010061556169_FirstMigration"; }
         }
         
         string IMigrationMetadata.Source

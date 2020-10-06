@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATPapp.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -22,5 +23,15 @@ namespace ATPapp.Data
         public System.Data.Entity.DbSet<ATPapp.Models.Agenti> Agentis { get; set; }
 
         public System.Data.Entity.DbSet<ATPapp.Models.Clienti> Clientis { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Clienti>()
+                .HasOptional(s => s.Agente)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+        }
+
+
     }
 }

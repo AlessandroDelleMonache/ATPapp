@@ -96,8 +96,17 @@ namespace ATPapp.Controllers
                 return NotFound();
             }
 
-            db.Agentis.Remove(agenti);
-            db.SaveChanges();
+            try
+            {
+                db.Agentis.Remove(agenti);
+                db.SaveChanges(); 
+            }
+            catch (System.Data.Entity.Infrastructure.DbUpdateException ex)
+            {
+                //.AgentiId = null;
+                //db.SaveChanges();
+            }
+            
 
             return Ok(agenti);
         }

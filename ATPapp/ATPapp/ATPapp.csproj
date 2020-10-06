@@ -172,9 +172,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010061421467_FirstMigration.cs" />
-    <Compile Include="Migrations\202010061421467_FirstMigration.designer.cs">
-      <DependentUpon>202010061421467_FirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202010061556169_FirstMigration.cs" />
+    <Compile Include="Migrations\202010061556169_FirstMigration.designer.cs">
+      <DependentUpon>202010061556169_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Agenti.cs" />
@@ -359,8 +359,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010061421467_FirstMigration.resx">
-      <DependentUpon>202010061421467_FirstMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010061556169_FirstMigration.resx">
+      <DependentUpon>202010061556169_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
