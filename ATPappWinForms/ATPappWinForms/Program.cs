@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ATPappWinForms
+namespace ATPappWinforms
 {
     static class Program
     {
@@ -16,11 +16,7 @@ namespace ATPappWinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< Updated upstream
-            Application.Run(new frmAvvio());
-=======
             Application.Run(new frmHome());
->>>>>>> Stashed changes
         }
     }
 }

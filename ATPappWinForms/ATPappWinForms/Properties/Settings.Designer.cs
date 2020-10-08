@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ATPappWinForms.Properties
+namespace ATPappWinforms.Properties
 {
 
 

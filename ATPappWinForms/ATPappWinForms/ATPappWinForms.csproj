@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{02B39C3D-E7B8-4661-BE2E-9A5E923762C7}</ProjectGuid>
+    <ProjectGuid>{BC64824E-7E53-4D1C-8567-1A450C60C0DD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ATPappWinForms</RootNamespace>
-    <AssemblyName>ATPappWinForms</AssemblyName>
+    <RootNamespace>ATPappWinforms</RootNamespace>
+    <AssemblyName>ATPappWinforms</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,13 +54,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< Updated upstream
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-=======
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
->>>>>>> Stashed changes
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
