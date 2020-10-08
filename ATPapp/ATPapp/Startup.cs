@@ -57,7 +57,7 @@ namespace ATPapp
                 TokenEndpointPath = new PathString("/oauth/token"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
                 Provider = new CustomOAuthProvider(),
-                AccessTokenFormat = new CustomJwtFormat("https://localhost:44390")
+                AccessTokenFormat = new CustomJwtFormat("http://atpapirest.azurewebsites.net/")
                 // Modificare nome porta localhost per Azure
             };
 
@@ -78,7 +78,7 @@ namespace ATPapp
         private void ConfigureOAuthTokenConsumption(IAppBuilder app)
         {
             // Cambiare porta localhost
-            var issuer = "https://localhost:44390";
+            var issuer = "http://atpapirest.azurewebsites.net/";
             string audienceId = ConfigurationManager.AppSettings["as:AudienceId"];
             byte[] audienceSecret = TextEncodings.Base64Url.Decode(ConfigurationManager.AppSettings["as:AudienceSecret"]);
 
