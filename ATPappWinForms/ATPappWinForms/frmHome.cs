@@ -10,9 +10,15 @@ using System.Windows.Forms;
 
 namespace ATPappWinForms
 {
+<<<<<<< Updated upstream:ATPappWinForms/ATPappWinForms/Form1.cs
     public partial class frmAvvio : Form
     {
         public frmAvvio()
+=======
+    public partial class frmHome : Form
+    {
+        public frmHome()
+>>>>>>> Stashed changes:ATPappWinForms/ATPappWinForms/frmHome.cs
         {
             InitializeComponent();
         }

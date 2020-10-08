@@ -1,6 +1,10 @@
 ﻿namespace ATPappWinForms
 {
+<<<<<<< Updated upstream:ATPappWinForms/ATPappWinForms/Form1.Designer.cs
     partial class frmAvvio
+=======
+    partial class frmHome
+>>>>>>> Stashed changes:ATPappWinForms/ATPappWinForms/frmHome.Designer.cs
     {
         /// <summary>
         /// Variabile di progettazione necessaria.
@@ -28,6 +32,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< Updated upstream:ATPappWinForms/ATPappWinForms/Form1.Designer.cs
             this.lstAgenti = new System.Windows.Forms.ListBox();
             this.lblAgenti = new System.Windows.Forms.Label();
             this.btnCaricaElenco = new System.Windows.Forms.Button();
@@ -71,6 +76,19 @@
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
+=======
+            this.SuspendLayout();
+            // 
+            // frmHome
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(809, 461);
+            this.Name = "frmHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Home";
+            this.ResumeLayout(false);
+>>>>>>> Stashed changes:ATPappWinForms/ATPappWinForms/frmHome.Designer.cs
 
         }
 

@@ -16,7 +16,11 @@ namespace ATPappWinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
             Application.Run(new frmAvvio());
+=======
+            Application.Run(new frmHome());
+>>>>>>> Stashed changes
         }
     }
 }

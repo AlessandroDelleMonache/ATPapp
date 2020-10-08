@@ -17,14 +17,14 @@ namespace ATPapp.Controllers
     {
         private ATPappContext db = new ATPappContext();
 
-        [Authorize]
+        //[Authorize]
         // GET: api/Agentis
         public IQueryable<Agenti> GetAgentis()
         {
             return db.Agentis;
         }
 
-        [Authorize(Roles ="SuperAdmin")]
+        //[Authorize(Roles ="SuperAdmin")]
         // GET: api/Agentis/5
         [ResponseType(typeof(Agenti))]
         public IHttpActionResult GetAgenti(int id)
@@ -38,7 +38,7 @@ namespace ATPapp.Controllers
             return Ok(agenti);
         }
 
-        [Authorize]
+        //[Authorize]
         // PUT: api/Agentis/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutAgenti(int id, Agenti agenti)
@@ -74,7 +74,7 @@ namespace ATPapp.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        [Authorize]
+        //[Authorize]
         // POST: api/Agentis
         [ResponseType(typeof(Agenti))]
         public IHttpActionResult PostAgenti(Agenti agenti)
@@ -90,7 +90,7 @@ namespace ATPapp.Controllers
             return CreatedAtRoute("DefaultApi", new { id = agenti.AgentiId }, agenti);
         }
 
-        [Authorize]
+        //[Authorize]
         // DELETE: api/Agentis/5
         [ResponseType(typeof(Agenti))]
         public IHttpActionResult DeleteAgenti(int id)
