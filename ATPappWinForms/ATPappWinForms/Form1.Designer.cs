@@ -1,6 +1,6 @@
 ﻿namespace ATPappWinForms
 {
-    partial class Form1
+    partial class frmAvvio
     {
         /// <summary>
         /// Variabile di progettazione necessaria.
@@ -28,13 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lstAgenti = new System.Windows.Forms.ListBox();
+            this.lblAgenti = new System.Windows.Forms.Label();
+            this.btnCaricaElenco = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // lstAgenti
+            // 
+            this.lstAgenti.FormattingEnabled = true;
+            this.lstAgenti.Location = new System.Drawing.Point(27, 60);
+            this.lstAgenti.Name = "lstAgenti";
+            this.lstAgenti.Size = new System.Drawing.Size(176, 186);
+            this.lstAgenti.TabIndex = 0;
+            // 
+            // lblAgenti
+            // 
+            this.lblAgenti.AutoSize = true;
+            this.lblAgenti.Location = new System.Drawing.Point(32, 41);
+            this.lblAgenti.Name = "lblAgenti";
+            this.lblAgenti.Size = new System.Drawing.Size(73, 13);
+            this.lblAgenti.TabIndex = 1;
+            this.lblAgenti.Text = "Elenco Agenti";
+            // 
+            // btnCaricaElenco
+            // 
+            this.btnCaricaElenco.Location = new System.Drawing.Point(257, 60);
+            this.btnCaricaElenco.Name = "btnCaricaElenco";
+            this.btnCaricaElenco.Size = new System.Drawing.Size(84, 46);
+            this.btnCaricaElenco.TabIndex = 2;
+            this.btnCaricaElenco.Text = "Carica Elenco Agenti";
+            this.btnCaricaElenco.UseVisualStyleBackColor = true;
+            // 
+            // frmAvvio
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(473, 415);
+            this.Controls.Add(this.btnCaricaElenco);
+            this.Controls.Add(this.lblAgenti);
+            this.Controls.Add(this.lstAgenti);
+            this.Name = "frmAvvio";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox lstAgenti;
+        private System.Windows.Forms.Label lblAgenti;
+        private System.Windows.Forms.Button btnCaricaElenco;
     }
 }
 
