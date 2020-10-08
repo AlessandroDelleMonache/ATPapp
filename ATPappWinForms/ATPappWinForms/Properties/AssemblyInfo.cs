@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Le informazioni generali relative a un assembly sono controllate dal seguente 
 // set di attributi. Modificare i valori di questi attributi per modificare le informazioni
 // associate a un assembly.
-[assembly: AssemblyTitle("ATPappWinforms")]
+[assembly: AssemblyTitle("ATPappWinForms")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ATPappWinforms")]
+[assembly: AssemblyProduct("ATPappWinForms")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Se il progetto viene esposto a COM, il GUID seguente verrà utilizzato come ID della libreria dei tipi
-[assembly: Guid("bc64824e-7e53-4d1c-8567-1a450c60c0dd")]
+[assembly: Guid("6200964a-c950-47be-9d66-18b3506d4611")]
 
 // Le informazioni sulla versione di un assembly sono costituite dai seguenti quattro valori:
 //

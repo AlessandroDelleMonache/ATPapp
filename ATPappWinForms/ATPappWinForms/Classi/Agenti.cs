@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ATPappWinforms.Classi
+namespace ATPappWinForms.Classi
 {
-    public class Agenti
+    class Agenti
     {
         public int AgentiId { get; set; }
         public string NomeAgente { get; set; }

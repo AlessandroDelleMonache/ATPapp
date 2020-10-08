@@ -1,33 +1,31 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace ATPappWinforms.Classi
+namespace ATPappWinForms.Classi
 {
     public class Utilities
     {
-        public static async Task RunAsync(HttpClient client)
+        public static async void GetAgenti (string url, DataGridView dgv)
         {
-            // Update port # in the following line.
-            client.BaseAddress = new Uri("http://atpapirest.azurewebsites.net/");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-        }
-
-        public static async Task<Agenti> GetAgentiAsync (string path, HttpClient client)
-        {
-            Agenti agente = null;
-            HttpResponseMessage response = await client.GetAsync(path);
-            if (response.IsSuccessStatusCode)
+            using (var client = new HttpClient())
             {
-                agente = await response.Content.ReadAsAsync<Agenti>();
+                using (var response = await client.GetAsync(url))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var fileJsonString = await response.Content.ReadAsStringAsync();
+
+                        dgv.DataSource = JsonConvert.DeserializeObject<Agenti[]>(fileJsonString).ToList();
+                    }
+                }
             }
-            return agente;
         }
     }
 }

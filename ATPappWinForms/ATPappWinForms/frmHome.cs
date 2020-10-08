@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATPappWinForms.Classi;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ATPappWinforms
+namespace ATPappWinForms
 {
     public partial class frmHome : Form
     {
@@ -19,7 +20,7 @@ namespace ATPappWinforms
 
         private void btnCarica_Click(object sender, EventArgs e)
         {
-
+            Utilities.GetAgenti("http://atpapirest.azurewebsites.net/api/Agentis", dgvAgenti);
         }
     }
 }
