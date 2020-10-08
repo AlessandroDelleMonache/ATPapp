@@ -16,5 +16,10 @@ namespace ATPappWinforms
         {
             InitializeComponent();
         }
+
+        private void btnCarica_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

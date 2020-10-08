@@ -35,28 +35,31 @@
             // lstAgenti
             // 
             this.lstAgenti.FormattingEnabled = true;
-            this.lstAgenti.ItemHeight = 16;
-            this.lstAgenti.Location = new System.Drawing.Point(46, 71);
+            this.lstAgenti.Location = new System.Drawing.Point(34, 58);
+            this.lstAgenti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstAgenti.Name = "lstAgenti";
-            this.lstAgenti.Size = new System.Drawing.Size(362, 196);
+            this.lstAgenti.Size = new System.Drawing.Size(272, 160);
             this.lstAgenti.TabIndex = 0;
             // 
             // btnCarica
             // 
-            this.btnCarica.Location = new System.Drawing.Point(512, 71);
+            this.btnCarica.Location = new System.Drawing.Point(354, 58);
+            this.btnCarica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCarica.Name = "btnCarica";
-            this.btnCarica.Size = new System.Drawing.Size(141, 60);
+            this.btnCarica.Size = new System.Drawing.Size(106, 49);
             this.btnCarica.TabIndex = 1;
             this.btnCarica.Text = "Carica agenti";
             this.btnCarica.UseVisualStyleBackColor = true;
+            this.btnCarica.Click += new System.EventHandler(this.btnCarica_Click);
             // 
             // frmHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(519, 341);
             this.Controls.Add(this.btnCarica);
             this.Controls.Add(this.lstAgenti);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";

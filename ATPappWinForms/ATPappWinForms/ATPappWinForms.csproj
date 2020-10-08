@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classi\Agenti.cs" />
+    <Compile Include="Classi\Utilities.cs" />
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
