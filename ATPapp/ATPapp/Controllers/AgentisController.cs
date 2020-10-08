@@ -17,12 +17,14 @@ namespace ATPapp.Controllers
     {
         private ATPappContext db = new ATPappContext();
 
+        [Authorize]
         // GET: api/Agentis
         public IQueryable<Agenti> GetAgentis()
         {
             return db.Agentis;
         }
 
+        [Authorize(Roles ="SuperAdmin")]
         // GET: api/Agentis/5
         [ResponseType(typeof(Agenti))]
         public IHttpActionResult GetAgenti(int id)
@@ -36,6 +38,7 @@ namespace ATPapp.Controllers
             return Ok(agenti);
         }
 
+        [Authorize]
         // PUT: api/Agentis/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutAgenti(int id, Agenti agenti)
@@ -71,6 +74,7 @@ namespace ATPapp.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
+        [Authorize]
         // POST: api/Agentis
         [ResponseType(typeof(Agenti))]
         public IHttpActionResult PostAgenti(Agenti agenti)
@@ -86,6 +90,7 @@ namespace ATPapp.Controllers
             return CreatedAtRoute("DefaultApi", new { id = agenti.AgentiId }, agenti);
         }
 
+        [Authorize]
         // DELETE: api/Agentis/5
         [ResponseType(typeof(Agenti))]
         public IHttpActionResult DeleteAgenti(int id)
@@ -96,17 +101,10 @@ namespace ATPapp.Controllers
                 return NotFound();
             }
 
-            try
-            {
-                db.Agentis.Remove(agenti);
-                db.SaveChanges(); 
-            }
-            catch (System.Data.Entity.Infrastructure.DbUpdateException ex)
-            {
-                //.AgentiId = null;
-                //db.SaveChanges();
-            }
-            
+            var master = db.Set<Agenti>().Include(m => m.Clienti)
+                        .SingleOrDefault(m => m.AgentiId == id);
+            db.Set<Agenti>().Remove(agenti);
+            db.SaveChanges();
 
             return Ok(agenti);
         }

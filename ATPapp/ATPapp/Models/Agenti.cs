@@ -14,5 +14,7 @@ namespace ATPapp.Models
         public int AgentiId { get; set; }
         public string NomeAgente { get; set; }
         public string SiglaAgente { get; set; }
+
+        public virtual ICollection<Clienti> Clienti { get; set; }
     }
 }

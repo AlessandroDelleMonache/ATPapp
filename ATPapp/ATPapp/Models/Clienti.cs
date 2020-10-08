@@ -14,9 +14,10 @@ namespace ATPapp.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string ClientiId { get; set; }
         public string RagioneSociale { get; set; }
+        
         public int? AgentiId { get; set; }
-
         [ForeignKey("AgentiId")]
-        public Agenti Agente { get; set; }
+        public virtual Agenti Agente { get; set; }
+
     }
 }

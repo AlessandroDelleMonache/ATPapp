@@ -1,5 +1,9 @@
 ﻿namespace ATPapp.Migrations
 {
+    using ATPapp.Data;
+    using ATPapp.Infrastructure;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -18,6 +22,50 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
+
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ATPappContext()));
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ATPappContext()));
+
+            // creo utente superadmin
+            var user = new ApplicationUser()
+            {
+                UserName = "alessandrodellemonache",
+                Email = "a.dellemonache@atpgroup.it",
+                EmailConfirmed = true,
+                FirstName = "Alessandro",
+                LastName = "Delle Monache",
+                Level = 1,
+                JoinDate = DateTime.Now.AddYears(-3)
+            };
+
+            // creo utente semplice
+            var userSimple = new ApplicationUser()
+            {
+                UserName = "sinibaldocaligiuri",
+                Email = "s.caligiuri@atpgroup.it",
+                EmailConfirmed = true,
+                FirstName = "Sinibaldo",
+                LastName = "Caligiuri",
+                Level = 3,
+                JoinDate = DateTime.Now.AddYears(-3)
+            };
+
+            manager.Create(user, "MySuperP@ssword!");
+            manager.Create(userSimple, "MySuperP@ssword!");
+
+            if (roleManager.Roles.Count() == 0)
+            {
+                roleManager.Create(new IdentityRole { Name = "SuperAdmin" });
+                roleManager.Create(new IdentityRole { Name = "Admin" });
+                roleManager.Create(new IdentityRole { Name = "User" });
+            }
+
+            var adminUser = manager.FindByName("alessandrodellemonache");
+            manager.AddToRoles(adminUser.Id, new string[] { "SuperAdmin" });
+
+            var simpleUser = manager.FindByName("sinibaldocaligiuri");
+            manager.AddToRoles(simpleUser.Id, new string[] { "User" });
+
         }
     }
 }
